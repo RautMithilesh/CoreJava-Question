@@ -1,0 +1,55 @@
+NOTE: ignore double quotes of commands
+
+1) create two projet folders
+2) create bin, lib, src folders in project1 folder
+3) now create folder structure in src folder as below 
+   com->tcs->hdfc->loan->homeloan->Demo.java 
+4) now save below code in Demo.java
+
+	package com.tcs.hdfc.loan.homeloan;
+	public class Demo {
+  	  public static void main (String args[]){
+  	      System.out.println("Main function of class Demo executed....!");
+  	  }
+	}
+
+5) now open cmd in project1 folder and run following commands
+  a) to compile Demo.java
+      "javac -d bin src/com/tcs/hdfc/loan/homeloan/Demo.java"
+  b) to create jar file of com package which has Demo.class in it
+
+      "jar -cvf lib/Demo.jar -C bin com"
+            |     |    |      |   |   |
+         create & |    |     to   |   package name
+   	  view jar	|    |  create  |   from bin folder
+                  |    |  jar of  |
+              path of  |  package |
+	        jar file |          |
+                       |          |
+                       |          |
+			name of         folder in which 
+			jar file	    packages are stored
+
+6) now create bin, lib, src folders in project2 folder
+7) copy Demo.jar from lib of project1 to lib of project2
+8) now create folder structure in src folder of project2 as below 
+   com->tcs->hdfc->loan->carloan->Test.java
+9) now save below code in Test.java
+
+	package com.tcs.hdfc.loan.carloan;
+	import com.tcs.hdfc.loan.homeloan.Demo;
+	class Test {
+    	    public static void main (String args[]){
+   	        Demo.main(null);
+          }
+      }
+
+
+10) now open cmd in project2 folder and run following commands
+  a) setting classpath
+      "set classpath=bin;lib/Demo.jar"
+  b) to compile Test.java
+      "javac -d bin src/com/tcs/hdfc/loan/carloan/Test.java"
+  c) to run the Test.class
+      "java com.tcs.hdfc.loan.carloan.Test"
+

@@ -1,0 +1,21 @@
+create three subfolders as src, bin, lib in our project folder
+2) create folder "com" in the "src" folder
+3) create folder "tcs" in "com" folder 
+4) create folder "hdfc" in "tcs" folder
+5) create folder "loan" in "hdfc" folder
+6) create folder "home loan" in "loan" folder
+7) create file "Demo.java" in "home loan" folder
+8) write a simple hello world program in "Demo.java" file
+9) add this line "package com.tcs.hdfc.loan.homeloan;"
+   as first line in the Demo.java file
+10)  open cmd in main project folder and type following command
+    "javac -d bin src/com/tcs/hdfc/loan/homeloan/Demo.java"
+				OR
+     open cmd in homeloan folder and type following command
+    "javac -d ../../../../../../bin Demo.java"
+	
+11) now open cmd in the main project folder and type following commands
+	"set classpath=bin"
+	"java com.tcs.hdfc.loan.homeloan.Demo"
+
+So here program is successfully executed
